@@ -1,4 +1,4 @@
-//set path=C:\Program Files (x86)\Java\jdk1.8.0_301\bin
+
 import java.util.*;
 import java.awt.*;
 import java.util.Scanner;
@@ -18,7 +18,6 @@ public class postal_system
 {
 	public postal_system()
 	{
-
 
 	}
 
@@ -159,68 +158,8 @@ public class postal_system
 		Owner of = new Owner ();
 		InsuredPackage ip = new InsuredPackage ();
 
-
 		int userChoice;
 		boolean quit = false;
-
-		/*System.out.println("\t\t\nSender's Information ---> ");
-		System.out.print ("\nEnter Companys's Name           : " );
-		Owner ob1 = new Owner ();
-		String name = in.next();
-
-		System.out.print ("Enter Manager/Owner Name        : " );
-		Owner ob13 = new Owner ();
-		String msname = in.next();
-
-		System.out.print ("Enter your Company's Address    : " );
-		Owner ob2 = new Owner ();
-		String address = in.next();
-
-		System.out.print ("Enter your phone number         : ");
-		Owner ob5 = new Owner ();
-	        int phno = in.nextInt();
-
-		System.out.print ("Enter your pin-code number      : ");
-		Owner ob6 = new Owner ();
-	        int spincode = in.nextInt();
-
-		System.out.print ("Enter your city name            : " );
-		Owner ob7 = new Owner ();
-		String scity = in.next();
-
-		System.out.print ("Enter your state name           : " );
-		Owner ob8 = new Owner ();
-		String sstate = in.next();
-
-		System.out.println("\t\t\n\nReciver's Information ---> ");
-                System.out.print ("\nEnter Compnay's Name            : " );
-		Owner ob3 = new Owner ();
-		String rname = in.next();
-
-		System.out.print ("Enter Manager/Owner Name        : " );
-		Owner ob14 = new Owner ();
-		String mrname = in.next();
-
-		System.out.print ("Enter Compnays's Address        : " );
-		Owner ob4 = new Owner ();
-		String raddress = in.next();
-
-		System.out.print ("Enter your phone number         : ");
-		Owner ob9 = new Owner ();
-	        int rphno = in.nextInt();
-
-		System.out.print ("Enter your pin-code number      : ");
-		Owner ob10 = new Owner ();
-	        int rpincode = in.nextInt();
-
-		System.out.print ("Enter your city name            : " );
-		Owner ob11 = new Owner ();
-		String rcity = in.next();
-
-		System.out.print ("Enter your state name           : " );
-		Owner ob12 = new Owner ();
-		String rstate = in.next();
-		*/
 
 		CensusApp CensusApp = new CensusApp();
 		
@@ -228,9 +167,6 @@ public class postal_system
 		System.out.println ("\n\n\n*************************** SUCCESFULLY ADDED *****************************"
 				+ "\n\nUser ID and Package No. - "+"\n\t\t\t Unique User ID : " + of.getOwnerID()
 				+ "\n\t\t\t Package number : " + pf.getPackageID() + " belongs to you.");
-
-
-
 
 		do {
                        System.out.println("\n\n\n\n*************************** SELECT YOUR CHOICE *****************************\n");
@@ -240,8 +176,6 @@ public class postal_system
 			System.out.println("\n0 <-->  EXIT - To place ordered");
 			System.out.print("\n\nYour choice is : ");
 			userChoice = in.nextInt();
-
-
 
 			switch (userChoice) {
 			case 1:
@@ -381,16 +315,12 @@ public class postal_system
   		    System.err.println(e.getMessage());
 		}
 
-           
-
 	        }
-
 
 	 	public static Date postal_system(Date date)
     		{
         		return new Date(date.getTime() + MILLIS_IN_A_DAY);
     		}
-     
      
     		public static LocalDate postal_system(LocalDate localdate)
     		{
@@ -398,8 +328,6 @@ public class postal_system
 		}
 	  
 }
-
-
 
 //public 
 class CensusApp
@@ -566,15 +494,10 @@ class UserID
 }
 
 
-
-
 class Registration {
 	 
-     
     public void register() throws FileNotFoundException
     {
-       
-
 	Scanner in=new Scanner(System.in);
          
         System.out.print("\nEnter User Name   : ");
@@ -592,8 +515,6 @@ class Registration {
         Pass=Pass.trim();
         ConPass=ConPass.trim();
 	 
-         
- 
         String x= Uname+" "+Pass;
         if(Pass.equals(ConPass))
         {
@@ -675,8 +596,7 @@ class Registration {
     public void login()
     {
          
-        Scanner in=new Scanner(System.in);
-	
+        Scanner in=new Scanner(System.in);	
          
         System.out.print("\n\nEnter User Name     : ");
         String Uname=in.nextLine();
@@ -739,11 +659,7 @@ class Registration {
         //in.close();
     }
 
-
 }
-
-
-
 
 //public
 class Package 
@@ -771,9 +687,6 @@ class Package
 	public Package(){
 
 	}
-
-
-
 	public void setPackageID (double pnumber){
 
 		this.pnumber = pnumber;
@@ -788,10 +701,6 @@ class Package
 		return pick;
 
 	}
-
-
-
-
 	public void setAir (double Air){
 
 		this.Air = Air;
@@ -917,10 +826,6 @@ class InsuredPackage extends Package
 	    public InsuredPackage (){
 	        super ();
 	    }
-
-
-
-
 	    public void setRange (double range){
 	        this.range = range;
 	    }
@@ -948,8 +853,6 @@ class InsuredPackage extends Package
 	        
 	    }
 }
-
-
 
 class pay_debit
 {
@@ -1087,11 +990,8 @@ class google_pay
 		out.write(userInput);
 
 				
-                System.out.print("\n\nTranscation Status -----> $ SUCCESFULLY PAID \n\n\n" );
-
-				
+                System.out.print("\n\nTranscation Status -----> $ SUCCESFULLY PAID \n\n\n" );			
                 out.newLine(); //write a new line to the file on the next line
-
                 out.close();//flushes and closes the stream
             }
             catch(IOException e)
@@ -1111,8 +1011,7 @@ class  PayPal
         try
             {
               
-		BufferedWriter out = new BufferedWriter(new FileWriter("payment.txt", true));
-		
+		BufferedWriter out = new BufferedWriter(new FileWriter("payment.txt", true));		
                 
                 String userInput = ("");
         
@@ -1163,8 +1062,7 @@ class  Bhim
             {
               
 		BufferedWriter out = new BufferedWriter(new FileWriter("payment.txt", true));
-		
-                
+	         
                 String userInput = ("");
         
                 Scanner input = new Scanner(System.in);
@@ -1268,227 +1166,8 @@ of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN 
  PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
 
 
-
-
 */
 
 
 
 
-/*
-
-import java.util.*;   
-
-class product{
-	String p_name;
-        int p_weight;
-
-	void product_details(){
-			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter Product Name : ");
-			String p_name= sc.nextLine();
-			System.out.println("Enter Products weight in kg : ");
-			int p_weight = sc.nextInt();           
-	   }
-	void product_display(){
-			System.out.println("Product is "+p_name+" with size "+ p_weight);
-	  }
-}   
-
-class postal
-{
-	public String sname, rname, saddress, raddress;
-	public int pid, phnumber, items;
-	
-	postal(String s_name, String r_name, String s_address, String r_address, int ph_number, int t_items)
-	{
-		System.out.println("\n\t\t************Succefully Added**************\n");
-		sname = s_name;
-		rname = r_name;
-		saddress = s_address;
-		raddress = r_address;
-		phnumber = ph_number;
-		items = t_items;
-	}
-	
-	public void showDetails()
-	{
-		System.out.println("Details - \n\t Sender " + sname + "\n\t is sending this parcel to " + rname+ "\n\t from Address "+ saddress +"\n\t to this Address "+ raddress +"\n\t and Phone number is " + phnumber+"\n\t number of Total items is "+items);
-	}
-
-	public static void main(String[] args)
-	{	
-		product p1 = new product();
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter Senders Name : ");
-		String sname = sc.next();
-		System.out.print("Enter Recivers Name : ");
-		String rname = sc.next();
-		System.out.print("Enter Senders Address : ");
-		String saddress = sc.next();
-		System.out.print("Enter Recivers Address : ");
-		String raddress = sc.next();
-		System.out.print("Enter Phone Number : ");
-		int phnumber = sc.nextInt();
-		System.out.print("Enter Total items : ");
-		int items = sc.nextInt();
-		postal information = new postal(sname, rname, saddress, raddress, phnumber, items);
-		information.showDetails();
-		p1.product_details();
-		p1.product_display();
-	}
-
-}
-*/
-
-
-/*
-//public 
-class Owner extends Package {
-    
-    private double onumber;
-    private int phno;
-    private int rphno;
-    private String name;
-    private String msname;
-    private String mrname;
-    private String address;
-    private String rname;
-    private String raddress;
-    private int spincode;
-    private String scity;
-    private String sstate;
-    private int rpincode;
-    private String rcity;
-    private String rstate;
-   
-    public void setOwnerID (double onumber){
-
-        this.onumber = onumber;
-
-    }
-
-    public double getOwnerID (){
-
-        Random rand = new Random();
-        int opick = rand.nextInt(40)+1;
-        return opick;
-    }
-
-    public void setphno (int phno){
-        this.phno = phno;
-    }
-
-    public int getphno (){
-        return phno;
-    }
-
-    public void setrphno (int rphno){
-        this.rphno = rphno;
-    }
-
-    public int getrphno (){
-        return rphno;
-    }
-
-    public void setName (String name){
-        this.name = name;
-    }
-
-    public String getName (){
-        return name;
-    }
-
-    
-    public void setmsName (String msname){
-        this.msname = msname;
-    }
-
-    public String getmsName (){
-        return msname;
-    }
-
-    
-    public void setmrName (String mrname){
-        this.mrname = mrname;
-    }
-
-    public String getmrName (){
-        return mrname;
-    }
-
-    public void setAddress (String address){
-        this.address = address;
-    }
-
-    public String getAddress (){
-        return address;
-    }
-
-    public void setrName (String rname){
-        this.rname = rname;
-    }
-
-    public String getrName (){
-        return rname;
-    }
-
-    public void setrAddress (String raddress){
-        this.raddress = raddress;
-    }
-
-    public String getrAddress (){
-        return raddress;
-    }
-
-    public void setspincode (int spincode){
-        this.spincode = spincode;
-    }
-
-    public int getspincode (){
-        return spincode;
-    }
-	
-    public void setscity (String scity){
-        this.scity = scity;
-    }
-
-    public String getscity (){
-        return scity;
-    }
-
-     public void setsstate (String sstate){
-        this.sstate = sstate;
-    }
-
-    public String getsstate (){
-        return sstate;
-    }
-
-     public void setrpincode (int rpincode){
-        this.rpincode = rpincode;
-    }
-
-    public int getrpincode (){
-        return rpincode;
-    }
-	
-    public void setrcity (String rcity){
-        this.rcity = rcity;
-    }
-
-    public String getrcity (){
-        return rcity;
-    }
-
-     public void setrstate (String rstate){
-        this.rstate = rstate;
-    }
-
-    public String getrstate (){
-        return rstate;
-    }
-
-}
-
-*/
